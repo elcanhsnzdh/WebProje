@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Sayfası</title>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>İletişim formu</h1>
+        <form @submit.prevent="submitForm">
+            <div>
+                <label for="name">Isminiz:</label>
+                <input type="text" id="name" v-model="formData.name" required>
+            </div>
+            <div>
+                <label for="email">E-posta adresiniz:</label>
+                <input type="email" id="email" v-model="formData.email" required>
+
+            </div>
+            <div>
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" v-model="formData.message" required></textarea>
+
+            </div>
+            <button type="submit">Gönder</button>
+            <button @click="resetForm">Sıfırla</button>
+
+        </form>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                formData: {
+                    name: '',
+                    email: '',
+                    message: ''
+                }
+            },
+            methods: {
+                submitForm() {
+                    console.log('Form gönderildi.');
+                    console.log('Ad: ' + this.formData.name);
+                    console.log('E-posta: ' + this.formData.email);
+                    console.log('Mesaj: ' + this.formData.message);
+                },
+                resetForm() {
+                    this.formData.name = '';
+                    this.formData.email = '';
+                    this.formData.message = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
