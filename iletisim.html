@@ -104,16 +104,17 @@
     
     <div id="app">
         <div class="navbar">
-            <a href="index.html">Anasayfa</a>
+            <a href="anasayfa.html">Anasayfa</a>
             <a href="hakkimda.html">Hakkımda</a>
             <a href="sehrim.html">Şehrim</a>
             <a href="mirasimiz.html">Mirasımız</a>
             <a href="iletisim.html">İletişim</a>
+            <a href="ilgialanlarim.html">İlgi Alanlarım</a>
         </div>
         
         <h1>İletişim Formu</h1>
         <form @submit.prevent="submitForm">
-            <form action="mailto:elcan.huseynzade@sakarya.edu.tr" method="POST" enctype="text/plain"></form>
+            <form action="mailto:elcan.huseynzade@ogr.sakarya.edu.tr" method="POST" enctype="text/plain"></form>
             <div>
                 <label for="name">Adınız:</label>
                 <input type="text" id="name" v-model="formData.name" required>
