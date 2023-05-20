@@ -40,6 +40,9 @@
             margin: 200px auto;
             max-width: 500px;
             text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
         }
         
         h1 {
@@ -68,7 +71,7 @@
         input[type="text"],
         input[type="email"],
         textarea {
-            width: 30%;
+            width: 50%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -112,8 +115,9 @@
             <a href="ilgialanlarim.html">İlgi Alanlarım</a>
         </div>
         
-        <h1>İletişim Formu</h1>
-        <form @submit.prevent="submitForm">
+        <h1>İsteklerinizi yazabilirsiniz</h1>
+    <div class="container">
+        <form @submit.prevent="submitForm" >
             <form action="mailto:elcan.huseynzade@ogr.sakarya.edu.tr" method="POST" enctype="text/plain"></form>
             <div>
                 <label for="name">Adınız:</label>
@@ -127,9 +131,11 @@
                 <label for="message">Mesajınız:</label>
                 <textarea id="message" v-model="formData.message" required></textarea>
             </div>
-            <button type="submit">Formu Gönder</button>
-            <button @click="resetForm">Formu Sıfırla</button>
+            <button type="submit"> Gönder</button>
+            <button @click="resetForm"> Sıfırla</button>
+          
         </form>
+
     </div>
 
     <script>
