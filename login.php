@@ -4,12 +4,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	$password = $_POST['password'];
 	$mail_password = substr($username, 0, strpos($username, "@"));
 	if($password == $mail_password){
-		$alert = sprintf("<div class='container my-5'><div class='alert alert-success text-center' role='alert'>Giriş başarılı!<br> Hoşgeldiniz %s !</h1></div>",$mail_password);
+		$alert = sprintf("<div class='container my-5'><div class='alert alert-success text-center' role='alert'>Login Successful! <br> Welcome %s !</h1></div>",$mail_password);
 		echo $alert;
-		echo '<meta http-equiv="refresh" content="4; url=anasayfa.html" />';
+		echo '<meta http-equiv="refresh" content="4; url=index.html" />';
 	}
 	else{
-		echo "<div class='container my-2'><div class='alert alert-danger text-center' role='alert'><h6>Mailinizi veya şifrenizi yanlış girdiniz!<br>Lütfen tekrar deneyiniz!!</h6></div></div>";
+		echo "<div class='container my-2'><div class='alert alert-danger text-center' role='alert'><h6>Mail or password is false <br>Please Try Again!!!!</h6></div></div>";
 	}
 }
 ?>
@@ -20,19 +20,21 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-</head>
-<style>
-    body {
-        background-image: url(img/saulogo.jpeg);
-        background-position: center;
-    }
-    .mb-3 {
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+	<link rel="stylesheet" href="css/login.css" />
+    <style>body {
+  background-image: url("img/saulogo.jpeg");
+  background-position: center;
+}
+.mb-3 {
+
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 </style>
+
+</head>
+	
 <body>
 	<div class="container my-5"><br>
         <div class="d-flex justify-content-center">
