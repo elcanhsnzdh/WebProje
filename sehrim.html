@@ -1,150 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        
-    <style>
-    body {
-        background-image: url(file:///C:/Users/Toshiba/Pictures/anasayfaarkaplan.jpeg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:cover;
-    }
-    .container {
-            background-color: rgb(238, 238, 238);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 200px auto;
-            max-width: 500px;
-            position: relative;
-            bottom: 150px;
-        }
-    
-    .navbar {
-        background-color: #1f456b;
-        padding: 30px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .navbar a {
-        margin: 0 40px;
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-    }
-    .navbar {
-    border: 10px solid rgb(18, 20, 53); 
-    border-radius: 5px; 
-    padding: 40px; 
-    
-    }
-    a{
-      font-family: 'Oswald', sans-serif;
-      font-weight: bold;
-      font-size: 30px;
-    }
-    .carousel {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-    .slider-container {
-        width: 650px;
-        height: 300px;
-        margin: 0 auto;
-        overflow: hidden;
-        border: 5px solid #1f456b;
-        border-radius: 10px;
-        background-color: rgb(106, 106, 106);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/sehrim.css" />
+    <title>Şehrim</title>
 
-    .slider-content {
-        display: flex;
-        transition: transform 0.3s ease-in-out;
-    }
+    <style></style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    .slider-item {
-        flex: 0 0 800px;
-        height: 400px;
-    }
-    img{
-        width: 500px;
-        height: 300px;
-        border-radius: 10px;
-        margin-left: 80px;
-    }
-    #container{
-        max-width: 750px;
-        
-    }
-    h1{
-        text-align: center;
-    }
-
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-</head>
-     
-<body>
+  <body>
     <div class="navbar">
-        <a href="anasayfa.html">Anasayfa</a>
-        <a href="takim.html">Takım</a>
-        <a href="hakkimda.html">Hakkımda</a>
-        <a href="sehrim.html">Şehrim</a>
-        <a href="iletisim.html">İletişim</a>
-        <a href="ilgialanlarim.html">İlgi Alanlarım</a>
-        <a href="CV.html">CV</a>
+      <a href="anasayfa.html">Anasayfa</a>
+      <a href="takim.html">Takım</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="sehrim.html">Şehrim</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="ilgialanlarim.html">İlgi Alanlarım</a>
+      <a href="CV.html">CV</a>
+      <a href="login.php">Giriş Yap</a>
     </div>
     <section>
-    <div class="slider-container">
+      <div class="slider-container">
         <div class="slider-content">
-            <div class="slider-item">
-                <img src="file:///C:/Users/Toshiba/Desktop/guvercinaniti.jpg" alt="Slayt 1">
-            </div>
-            <div class="slider-item">
-                <img src="file:///C:/Users/Toshiba/Desktop/kusbakisi.jpg" alt="Slayt 2">
-            </div>
-            <div class="slider-item">
-                <img src="file:///C:/Users/Toshiba/Desktop/martiabidesi.jpg" alt="Slayt 3">
-            </div>
+          <div class="slider-item">
+            <img src="img/guvercinaniti.jpg" alt="Slayt 1" />
+          </div>
+          <div class="slider-item">
+            <img src="img/kusbakisi.jpg" alt="Slayt 2" />
+          </div>
+          <div class="slider-item">
+            <img src="img/martiabidesi.jpg" alt="Slayt 3" />
+          </div>
         </div>
-    </div>
-    <div class="container" id="container">
+      </div>
+      <div class="container" id="container">
         <header><h1>Sumgayıt</h1></header>
-        <p style="color:#45a049">(1.Resim- "Barış Güvercini Anıtı"  2.Resim- "Şehir Merkezi" 3.Resim- "Şehrin girişinde bulunan Martı Abidesi")</p> 
-        <p style="font-family:Verdana">Azerbaycan'ın Bakü'den sonra ikinci büyük şehridir.</p>
-        <br><p style="font-family:Verdana">Bakü'de petrol ihracatının genişlemesi nedeni ile 1935'te Sovyet yönetimi Abşeron yarımadasında ağır sanayinin geliştirilmesine dair karar verilmiştir. Bu kararın sonucunda, 22 Kasım 1949 tarihinde Bakü'nün 30 kilometre kuzeyinde Sumgayıt şehri kurulmuştur. Time dergisi'nin 2007 yılına ait yazısına göre, Sumgayıt çevre kirliliği açısından dünya kentleri arasında o yıl 1. olmuştur</p>
-    </div>
-</section>
-   
+        <p style="color: #45a049">
+          (1.Resim- "Barış Güvercini Anıtı" 2.Resim- "Şehir Merkezi" 3.Resim-
+          "Şehrin girişinde bulunan Martı Abidesi")
+        </p>
+        <p style="font-family: Verdana">
+          Azerbaycan'ın Bakü'den sonra ikinci büyük şehridir.
+        </p>
+        <br />
+        <p style="font-family: Verdana">
+          Bakü'de petrol ihracatının genişlemesi nedeni ile 1935'te Sovyet
+          yönetimi Abşeron yarımadasında ağır sanayinin geliştirilmesine dair
+          karar verilmiştir. Bu kararın sonucunda, 22 Kasım 1949 tarihinde
+          Bakü'nün 30 kilometre kuzeyinde Sumgayıt şehri kurulmuştur. Time
+          dergisi'nin 2007 yılına ait yazısına göre, Sumgayıt çevre kirliliği
+          açısından dünya kentleri arasında o yıl 1. olmuştur
+        </p>
+      </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const sliderContent = document.querySelector(".slider-content");
         const sliderItems = document.querySelectorAll(".slider-item");
         const slideWidth = sliderItems[0].offsetWidth;
         let currentIndex = 0;
 
         function slideNext() {
-            currentIndex++;
-            if (currentIndex >= sliderItems.length) {
-                currentIndex = 0;
-            }
-            sliderContent.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+          currentIndex++;
+          if (currentIndex >= sliderItems.length) {
+            currentIndex = 0;
+          }
+          sliderContent.style.transform = `translateX(-${
+            currentIndex * slideWidth
+          }px)`;
         }
 
         setInterval(slideNext, 3000);
-    });
-         
+      });
     </script>
-</body>
+  </body>
 </html>
