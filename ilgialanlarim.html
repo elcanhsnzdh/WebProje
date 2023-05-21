@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="anasayfa.html">Anasayfa</a>
+      <a href="index.html">Anasayfa</a>
       <a href="takim.html">Takım</a>
       <a href="hakkimda.html">Hakkımda</a>
       <a href="sehrim.html">Şehrim</a>
@@ -26,9 +26,69 @@
       <a href="CV.html">CV</a>
       <a href="login.php">Giriş Yap</a>
     </div>
-    <h1>Film Önerileri</h1>
-    <div id="filmListesi"></div>
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="col-md-4">
+          <div style="max-height: 300px; overflow-y: scroll">
+            <table id="oyuncu-tablosu">
+              <thead>
+                <tr>
+                  <th>Fotoğraf</th>
+                  <th>Oyuncu</th>
+                  <th>Karakter</th>
+                </tr>
+              </thead>
+              <tbody id="oyuncu-listesi"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-light">
+            <div class="card-body">
+              <h5 class="card-title fs-4">GodFather(1972)</h5>
+              <br />
+              <p class="card-text fs-5">
+                GodFather en sevdiğim film serilerindendir. Ve en sevdiğim filmi
+                birinci filmdir. Bu filmi defalarca izledim ve her izlediğimde
+                daha çok büyüleniyorum. Oyuncu kadrosu tek kelime ile muhteşem.
+                Yanda da oyuncuların, fotoğrafları,karakterlerin ve kendi
+                isimleri bulunmaktadır. GodFather'ın benim için yeri çok
+                ayrıdır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      fetch("https://imdb-api.com/en/API/FullCast/k_px437f9q/tt0068646")
+        .then((response) => response.json())
+        .then((data) => {
+          const oyuncular = data.actors;
+          const oyuncuListesi = document.getElementById("oyuncu-listesi");
+
+          oyuncular.forEach((oyuncu) => {
+            const oyuncuRow = document.createElement("tr");
+            const oyuncuResim = document.createElement("td");
+            const oyuncuAd = document.createElement("td");
+            const karakterAd = document.createElement("td");
+
+            const img = document.createElement("img");
+            img.src = oyuncu.image;
+            img.width = 50;
+            oyuncuResim.appendChild(img);
+
+            oyuncuAd.textContent = oyuncu.name;
+            karakterAd.textContent = oyuncu.asCharacter;
+
+            oyuncuRow.appendChild(oyuncuResim);
+            oyuncuRow.appendChild(oyuncuAd);
+            oyuncuRow.appendChild(karakterAd);
+
+            oyuncuListesi.appendChild(oyuncuRow);
+          });
+        })
+        .catch((error) => console.log(error));
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
