@@ -1,0 +1,85 @@
+body {
+  background-image: url("../img/anasayfaarkaplan.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #1f456b;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  margin: 0 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.container {
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 200px auto;
+  max-width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 48px;
+}
+.navbar {
+  border: 10px solid rgb(18, 20, 53);
+  border-radius: 5px;
+  padding: 40px;
+}
+a {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 150px;
+}
+button[type="submit"],
+button[type="button"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #45a049;
+}
